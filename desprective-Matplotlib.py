@@ -26,3 +26,12 @@ plt.show()
 plt.boxplot(student_df['Grade'])
 plt.title('Box plate of Grade')
 plt.show()
+
+
+# Data Exploration
+# Correlation heatmap with matplotlib
+correlation_matrix = student_df.corr()
+plt.imshow(correlation_matrix, cmap='coolwarm', interpolation='nearest')
+plt.colorbar()
+plt.title('Correlation Heatmap')
+plt.show()
