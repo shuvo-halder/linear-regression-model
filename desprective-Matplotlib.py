@@ -20,3 +20,9 @@ plt.xlabel('Age')
 plt.ylabel('Frequency')
 plt.title('Age')
 plt.show()
+
+# box plate with matplotlib
+
+plt.boxplot(student_df['Grade'])
+plt.title('Box plate of Grade')
+plt.show()
