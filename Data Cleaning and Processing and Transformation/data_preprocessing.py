@@ -13,4 +13,7 @@ data = pd.read_csv(os.path.normcase(os.path.join(script_dir, file_name)))
 scaler = StandardScaler()
 
 df_scaled = scaler.fit_transform(data)
-print(df_scaled)
+# print(df_scaled)
+encoder = OneHotEncoder()
+df_encoded = encoder.fit_transform(data[['Gender']])
+print(df_encoded)
