@@ -12,5 +12,9 @@ data.dropna(inplace=True)
 data.fillna(data.mean(), inplace=True)
 
 # remove duplicates rows
-data.drop_duplicates(inplace=True)
+remove_duplicate = data.drop_duplicates(inplace=True)
 
+# pring the data
+ind_cityzen = pd.DataFrame(remove_duplicate)
+summery_state = ind_cityzen.describe()
+print(summery_state)
