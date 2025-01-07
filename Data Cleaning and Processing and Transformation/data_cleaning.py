@@ -10,3 +10,7 @@ data = pd.read_csv(os.path.normcase(os.path.join(script_dir, file_name)))
 data.dropna(inplace=True)
 
 data.fillna(data.mean(), inplace=True)
+
+# remove duplicates rows
+data.drop_duplicates(inplace=True)
+
